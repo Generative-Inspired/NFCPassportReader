@@ -1,0 +1,56 @@
+Identify all Swift files in the "Sources" folder by recursively traversing directories and finding files with a ".swift" extension.
+
+- Create a list of these Swift files with their paths in a text file.
+- Convert each Swift file into a Dart file, ensuring the functionality of the program is preserved.
+- Address any discrepancies due to differences in Swift and Dart languages.
+- Generate a new README documenting how to run the new Dart project.
+- Ensure every Swift file has an equivalent Dart file and create additional necessary files.
+
+# Steps
+
+1. **Identify Swift Files**: 
+   - Recursively search the "Sources" directory for all files with a ".swift" extension.
+   - Record the full paths of these files into a text file.
+
+2. **Convert to Dart**:
+   - For each Swift file, create a corresponding Dart file.
+   - Translate Swift code into Dart, maintaining functionality and addressing language-specific differences.
+
+3. **Documentation**:
+   - Create a README file detailing how to compile and run the Dart project.
+
+4. **Verification**:
+   - Check that each Swift file has a corresponding Dart file.
+   - Ensure functionality is intact and compatible with Dart's syntax and semantics.
+
+5. **Supplementary Files**:
+   - Identify and create any additional files required for the Dart project.
+
+# Output Format
+
+Provide the list of Swift files as a plain text file with each file path on a new line. Convert each Swift file to a Dart file and produce a README in markdown format detailing the project setup and execution.
+
+# Examples
+
+(This is a simplified example; ensure actual conversions and examples include real files and their corresponding Dart translations as much as needed.)
+
+**Swift File List Example:**
+
+- Sources/Example1.swift
+- Sources/Subfolder/Example2.swift
+
+**README Example:**
+
+```
+# Dart Project Conversion
+To compile and run the new Dart project, follow these steps:
+1. Install the Dart SDK...
+2. Navigate to...
+...
+```
+
+# Notes
+
+- Pay attention to Swift-specific features that may not directly translate to Dart, such as memory management or availability of libraries.
+- The conversion should consider Dart's asynchronous nature if applicable.
+- Consider the use of Dart tools or packages that could facilitate some Swift-specific functionalities.

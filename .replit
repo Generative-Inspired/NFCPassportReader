@@ -1,0 +1,8 @@
+modules = ["swift-5.8"]
+run = "use_frameworks! pod 'NFCPassportReader' "
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "use_frameworks! pod 'NFCPassportReader' "]
