@@ -40,3 +40,34 @@ abstract class DataGroup {
     }
   }
 }
+import 'dart:typed_data';
+import '../utils/logging.dart';
+import 'data_group_id.dart';
+
+abstract class DataGroup {
+  late List<int> data;
+  late DataGroupId dgId;
+  
+  DataGroup(this.dgId);
+  
+  Future<void> parse(List<int> data) async {
+    this.data = data;
+    try {
+      await parseDataGroup();
+    } catch (e) {
+      Logger.error('Error parsing DataGroup: $e');
+      rethrow;
+    }
+  }
+  
+  Future<void> parseDataGroup();
+  
+  String getTag() {
+    if (data.isEmpty) return '';
+    return data[0].toRadixString(16);
+  }
+  
+  bool checkRequiredLength(int required) {
+    return data.length >= required;
+  }
+}
